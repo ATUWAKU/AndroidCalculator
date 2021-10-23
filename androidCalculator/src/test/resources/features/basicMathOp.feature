@@ -5,16 +5,13 @@ Feature: Basic math operations with the android calculator
   Scenario Outline:do the basic operations of the android calculator
   Given the user opens the calculator
   When he enter the numbers and the operation
-    | firstNumber   | sing   | secondNumber   |
-    | <firstNumber> | <sing> | <secondNumber> |
+    | firstNum   | sign   | secondNum   |
+    | <firstNum> | <sign> | <secondNum> |
   Then validate that the result is
     | result   |
     | <result> |
 
 Examples:
-  | firstNumber | sing | secondNumber | result |
-  |1            |+     |2             |3       |
-  |4            |-     |5             |-1      |
-  |6            |*     |7             |42      |
-  |18           |/     |9             |2       |
+  | firstNum    | sign | secondNum | result |
+  |1            |+     |2          |4       |
 

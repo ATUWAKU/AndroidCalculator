@@ -13,9 +13,9 @@ import static co.com.rappi.retoTecnico.userInterfaces.CalcObjects.NUMBER_BUTTON;
 public class Do implements Task {
 
     private TransactionData data;
-    private double firstNumber;
+    private int firstNumber;
     private String sing;
-    private double secondNumber;
+    private int secondNumber;
 
     public Do(TransactionData data) {
         firstNumber = data.getFirstNum();
@@ -30,9 +30,9 @@ public class Do implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Click.on(NUMBER_BUTTON.of(Double.toString(firstNumber))),
+                Click.on(NUMBER_BUTTON.of(Integer.toString(firstNumber))),
                 Select.sign(sing),
-                Click.on(NUMBER_BUTTON.of(Double.toString(secondNumber))),
+                Click.on(NUMBER_BUTTON.of(Integer.toString(secondNumber))),
                 Click.on(EQUALS_BUTTON)
         );
     }

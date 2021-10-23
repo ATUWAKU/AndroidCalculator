@@ -24,7 +24,7 @@ public class CalcObjects {
             .located(By.xpath("//*[@resource-id='com.android.calculator2:id/eq']"));
 
     public static Target RESUL_TEXT = Target.the("Operation result")
-            .located(By.xpath("//*[@resource-id='com.android.calculator2:id/result']"));
+            .located(By.xpath("//*[@resource-id='com.android.calculator2:id/formula']"));
 
 
 }

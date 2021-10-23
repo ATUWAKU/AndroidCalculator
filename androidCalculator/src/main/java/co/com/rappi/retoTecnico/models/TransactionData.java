@@ -5,8 +5,8 @@ import lombok.Data;
 @Data
 public class TransactionData {
 
-    private double firstNum;
-    private double secondNum;
+    private int firstNum;
+    private int secondNum;
     private String sign;
-    private double result;
+    private int result;
 }
