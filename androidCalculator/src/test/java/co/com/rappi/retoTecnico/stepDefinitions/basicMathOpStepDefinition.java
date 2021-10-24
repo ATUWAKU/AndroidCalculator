@@ -16,6 +16,7 @@ import java.util.List;
 
 import static net.serenitybdd.screenplay.actors.OnStage.*;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.hasValue;
 
 public class basicMathOpStepDefinition {
 
@@ -34,8 +35,8 @@ public class basicMathOpStepDefinition {
     public void validate_that_the_result_is(List<TransactionData> data) {
 
         theActorInTheSpotlight().should(seeThat(
-                 TheResult.isEquals(data.get(0).getResult()),Matchers.equalTo (true)
-        ).orComplainWith(ResultException.class));
+                 TheResult.isEquals(data.get(0).getResult()), x -> x.equals(true)
+        ).orComplainWith(ResultException.class, "El resultado no es correcto"));
 
 
 

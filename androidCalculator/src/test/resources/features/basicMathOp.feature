@@ -13,5 +13,7 @@ Feature: Basic math operations with the android calculator
 
 Examples:
   | firstNum    | sign | secondNum | result |
-  |1            |+     |2          |4       |
-
+  |1            |+     |2          |3       |
+  |4            |-     |5          |-1      |
+  |6            |*     |7          |42      |
+  |4            |/     |2          |2       |
